@@ -10,7 +10,7 @@ Just to add the helm repo and install it by using the following commands.
 ```
 helm repo add microauth-medium https://hub.microauth.io/chartrepo/medium
 helm repo update
-helm install snowflake-proxy tor-snowflake-proxy/tor-snowflake-proxy -n security
+helm install snowflake-proxy microauth-medium/tor-snowflake-proxy
 ```
 
 After that the Snowflake proxy should be up and running.
