@@ -14,3 +14,7 @@ helm install snowflake-proxy microauth-medium/tor-snowflake-proxy
 ```
 
 After that the Snowflake proxy should be up and running.
+
+To uninstall just enter
+
+helm uninstall -n security snowflake-proxy
