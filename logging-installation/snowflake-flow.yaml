@@ -1,0 +1,15 @@
+apiVersion: logging.banzaicloud.io/v1beta1
+kind: Flow
+metadata:
+  name: snowflake
+  namespace: security
+spec:
+  globalOutputRefs: []
+  localOutputRefs:
+  - snowflake-elasticsearch
+  match:
+  - select:
+      container_names:
+      - tor-snowflake-proxy
+      hosts: []
+      labels: {}
