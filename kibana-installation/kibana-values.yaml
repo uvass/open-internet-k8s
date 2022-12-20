@@ -69,18 +69,19 @@ image:
 ingress:
   annotations: {}
   apiVersion: ''
-  enabled: false
+  enabled: true
   extraHosts: []
   extraPaths: []
   extraRules: []
   extraTls: []
-  hostname: kibana.local
+  hostname: kibana.yourdomain.com
   ingressClassName: ''
-  path: /
-  pathType: ImplementationSpecific
-  secrets: []
+  path: /kibana
+  pathType: Prefix
+  secrets:
+    - secretName: kibana-tls-secret
   selfSigned: false
-  tls: false
+  tls: true
 initContainers: []
 initScriptsCM: ''
 initScriptsSecret: ''

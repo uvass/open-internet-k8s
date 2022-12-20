@@ -1,0 +1,16 @@
+[{
+	"grok": {
+		"field": "message",
+		"patterns": ["there were %{NUMBER:connections:int} connections. Traffic Relayed ↑ %{GREEDYDATA:upload-text}, ↓ %{GREEDYDATA:download-text}."]
+	}
+}, {
+	"bytes": {
+		"field": "upload-text",
+		"target_field": "upload"
+	}
+}, {
+	"bytes": {
+		"field": "download-text",
+		"target_field": "download"
+	}
+}]
